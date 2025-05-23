@@ -34,6 +34,7 @@ local options = {
   scrolloff = 8,                           -- is one of my fav
   sidescrolloff = 8,
   guifont = "monospace:h17",               -- the font used in graphical neovim applications
+  spell = true,
 }
 
 for k, v in pairs(options) do
