@@ -1,5 +1,8 @@
 return {
   {
+    "github/copilot.vim"
+  },
+  {
     "hrsh7th/nvim-cmp",
     -- load cmp on InsertEnter
     event = "InsertEnter",
@@ -17,6 +20,9 @@ return {
 
       -- LSP support
       "neovim/nvim-lspconfig",
+
+      -- AI
+      "hrsh7th/cmp-copilot",
     },
     config = function()
       local cmp = require'cmp'
@@ -94,6 +100,7 @@ return {
         sources = cmp.config.sources({
           { name = 'nvim_lsp' },
           { name = 'vsnip' },
+          { name = 'copilot' }
         }, {
           { name = 'buffer' },
         })
