@@ -61,10 +61,6 @@ keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
--- Telescope --
-keymap('n', '<leader>f', ":Telescope find_files<CR>", opts)
-keymap('n', '<leader>F', ":Telescope live_grep<CR>", opts)
-
 -- LSP --
 keymap('n', 'gd', vim.lsp.buf.definition, opts)
 keymap('n', 'gh', vim.lsp.buf.hover, opts)

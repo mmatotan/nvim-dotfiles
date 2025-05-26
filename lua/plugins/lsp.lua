@@ -107,6 +107,13 @@ return {
       require('lspconfig').ruby_lsp.setup {
         capabilities = capabilities
       }
+      require('lspconfig').lua_ls.setup {
+        capabilities = capabilities
+      }
     end
+  },
+  {
+    "mason-org/mason.nvim",
+    opts = {}
   }
 }
