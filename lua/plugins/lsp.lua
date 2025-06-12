@@ -27,10 +27,6 @@ return {
     config = function()
       local cmp = require'cmp'
 
-      local ELLIPSIS_CHAR = '…'
-      local MAX_LABEL_WIDTH = 20
-      local MIN_LABEL_WIDTH = 20
-
       cmp.setup({
         snippet = {
           expand = function(args)
@@ -117,10 +113,9 @@ return {
       require('lspconfig').lua_ls.setup {
         capabilities = capabilities
       }
+      require('lspconfig').dockerls.setup {
+        capabilities = capabilities
+      }
     end
-  },
-  {
-    "mason-org/mason.nvim",
-    opts = {}
   }
 }
