@@ -18,9 +18,6 @@ return {
       "hrsh7th/vim-vsnip",
       "hrsh7th/cmp-vsnip",
 
-      -- LSP support
-      "neovim/nvim-lspconfig",
-
       -- AI
       "hrsh7th/cmp-copilot",
     },
@@ -96,7 +93,7 @@ return {
         sources = cmp.config.sources({
           { name = 'nvim_lsp' },
           { name = 'vsnip' },
-          { name = 'copilot' }
+          { name = 'copilot' },
         }, {
           { name = 'buffer' },
         })
@@ -108,13 +105,7 @@ return {
     config = function()
       local capabilities = require('cmp_nvim_lsp').default_capabilities()
       require('lspconfig').ruby_lsp.setup {
-        capabilities = capabilities
-      }
-      require('lspconfig').lua_ls.setup {
-        capabilities = capabilities
-      }
-      require('lspconfig').dockerls.setup {
-        capabilities = capabilities
+        capabilities = capabilities,
       }
     end
   }

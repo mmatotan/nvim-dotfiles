@@ -24,6 +24,9 @@ return {
     completion = {
       nvim_cmp = true,
     },
+    follow_url_func = function(url)
+      vim.fn.jobstart({"xdg-open", url})  -- linux
+    end,
     mappings = {
       -- Overrides the 'gf' mapping to work on markdown/wiki links within your vault.
       ["gf"] = {
