@@ -104,7 +104,7 @@ return {
     "neovim/nvim-lspconfig",
     config = function()
       local capabilities = require('cmp_nvim_lsp').default_capabilities()
-      require('lspconfig').ruby_lsp.setup {
+      vim.lsp.config['ruby_lsp'] = {
         capabilities = capabilities,
       }
     end
