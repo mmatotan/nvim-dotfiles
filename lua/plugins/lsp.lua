@@ -107,6 +107,8 @@ return {
       vim.lsp.config['ruby_lsp'] = {
         capabilities = capabilities,
       }
+
+      vim.lsp.enable('ruby_lsp')
     end
   }
 }
