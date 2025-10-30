@@ -3,6 +3,16 @@ return {
     "github/copilot.vim"
   },
   {
+    "mason-org/mason-lspconfig.nvim",
+    dependencies = {
+        { "mason-org/mason.nvim", opts = {} },
+        "neovim/nvim-lspconfig",
+    },
+    opts = {
+      ensure_installed = { "lua_ls" },
+    },
+  },
+  {
     "hrsh7th/nvim-cmp",
     -- load cmp on InsertEnter
     event = "InsertEnter",
@@ -22,7 +32,7 @@ return {
       "hrsh7th/cmp-copilot",
     },
     config = function()
-      local cmp = require'cmp'
+      local cmp = require 'cmp'
 
       cmp.setup({
         snippet = {
@@ -107,7 +117,6 @@ return {
       vim.lsp.config['ruby_lsp'] = {
         capabilities = capabilities,
       }
-
       vim.lsp.enable('ruby_lsp')
     end
   }
